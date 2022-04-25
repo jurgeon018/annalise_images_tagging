@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'images',
     # third party
     'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -108,3 +109,10 @@ MEDIA_ROOT = BASE_DIR / 'media_root'
 # Default primary key field type
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# third party
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
+
